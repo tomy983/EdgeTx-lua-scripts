@@ -39,6 +39,7 @@
 
 local delayMillis = 100
 local nextPlayTime = getTime()
+local lang = getGeneralSettings().voice
 
 -- init_func is called once when model is loaded
 local function init()
@@ -50,14 +51,13 @@ local function getSignalValues()
     local fieldinfo = getFieldInfo("1RSS")
     if fieldinfo then
         local v = getValue("1RSS")
-        lcd.drawText(3, 13, "Signal: 1RSS (ELRS)", 0)
         if v == 0 then
             v = -115
         end
         return v, -115, 0
     end
 
-    lcd.drawText(3, 13, "Signal not found in 1RSS", 0)
+    lcd.drawText(3, 3, "Signal not found in 1RSS", 0)
     return nil, 0, 0
 end
 
@@ -66,8 +66,8 @@ local function main(event, touchState)
     lcd.clear() 
     local signalValue, signalMin, signalMax = getSignalValues()
     if signalValue == nil then        
-        playFile("/SCRIPTS/TOOLS/telemko.wav")
-        lcd.drawText(3, 28, "Qualcosa non va", 0)
+        playFile("/SOUNDS/" .. lang .. "/SYSTEM/telemko.wav")
+        lcd.drawText(3, 28, "SOMETHING WRONG..", 0)
         return
     end
 
@@ -77,25 +77,25 @@ local function main(event, touchState)
     local signalPercent = 100 * ((signalValue - signalMin) / (signalMax - signalMin))
 
     -- draw bar
-    lcd.drawGauge(3, 40, 115, 5, signalPercent, 100)
-    lcd.drawText(3, 50, "YOU CAN FIND IT!", 0)
+    lcd.drawGauge(3, 24, 122, 20, signalPercent, 100)
+    lcd.drawText(3, 50, "YOU CAN FIND IT !!", 0)
     if signalPercent == 0 then
-        lcd.drawText(3, 28, "NO SIGNAL")
+        lcd.drawText(3, 13, "NO SIGNAL")
     else
-        lcd.drawNumber(3, 28, signalPercent)
-        lcd.drawText(15, 28, "%")
+        lcd.drawNumber(3, 13, signalPercent)
+        lcd.drawText(15, 13, "%")
     end
 
     -- beep or messge  
     if getTime() >= nextPlayTime then
         if signalPercent == 0 then
-            playFile("/SCRIPTS/TOOLS/telemko.wav")
+            playFile("/SOUNDS/" .. lang .. "/SYSTEM/telemko.wav")
             nextPlayTime = getTime() + 800            
             playHaptic(10, 2)
             playHaptic(6, 10)
         else
             -- write current value            
-            playFile("/SCRIPTS/TOOLS/Model Locator (by RSSI).wav")
+            playTone(4100, 100, 0 )
             playHaptic(3, delayMillis - signalPercent, PLAY_NOW)
             nextPlayTime = getTime() + delayMillis - signalPercent   
         end
