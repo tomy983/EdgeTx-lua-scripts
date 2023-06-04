@@ -1,0 +1,16 @@
+return {
+    boardIdentifier = "S4SX",
+    hardwareRevision = 0,
+    boardType = 2,
+    targetCapabilities = 119,
+    targetName = "STM32F411SX1280",
+    boardName = "BETAFPVF4SX1280",
+    manufacturerId = "BEFH",
+    signature = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    mcuTypeId = 2,
+    configurationState = 128,
+    gyroSampleRateHz = 3200,
+    configurationProblems = 0,
+    spiRegisteredDeviceCount = 1,
+    i2cRegisteredDeviceCount = 0,
+}
