@@ -1,0 +1,141 @@
+checksum: 2077
+manuallyEdited: 0
+semver: 2.9.0
+board: tprov2
+calib: 
+   LH:
+      mid: 1074
+      spanNeg: 368
+      spanPos: 363
+   LV:
+      mid: 1026
+      spanNeg: 354
+      spanPos: 378
+   RV:
+      mid: 823
+      spanNeg: 441
+      spanPos: 410
+   RH:
+      mid: 1021
+      spanNeg: 307
+      spanPos: 306
+   P1:
+      mid: 1034
+      spanNeg: 1018
+      spanPos: 998
+   P2:
+      mid: 1107
+      spanNeg: 1090
+      spanPos: 926
+currModel: 0
+contrast: 150
+vBatWarn: 64
+txVoltageCalibration: 0
+backlightMode: backlight_mode_all
+antennaMode: MODE_PER_MODEL
+disableRtcWarning: 0
+keysBacklight: 0
+internalModule: TYPE_CROSSFIRE
+trainer: 
+   mix: 
+      0:
+         srcChn: 0
+         mode: REPL
+         studWeight: 100
+      1:
+         srcChn: 1
+         mode: REPL
+         studWeight: 100
+      2:
+         srcChn: 2
+         mode: REPL
+         studWeight: 100
+      3:
+         srcChn: 3
+         mode: REPL
+         studWeight: 100
+view: 2
+fai: 0
+beepMode: mode_nokeys
+alarmsFlash: 0
+disableMemoryWarning: 0
+disableAlarmWarning: 0
+stickMode: 1
+timezone: 1
+adjustRTC: 1
+inactivityTimer: 10
+internalModuleBaudrate: 0
+splashMode: 1
+hapticMode: mode_nokeys
+switchesDelay: 0
+lightAutoOff: 2
+templateSetup: 0
+PPM_Multiplier: 0
+hapticLength: 2
+beepLength: 2
+hapticStrength: 2
+gpsFormat: 0
+speakerPitch: 0
+speakerVolume: 12
+vBatMin: 62
+vBatMax: 84
+backlightBright: 0
+globalTimer: 23876
+bluetoothBaudrate: 0
+bluetoothMode: OFF
+countryCode: 0
+pwrOnSpeed: 1
+pwrOffSpeed: 0
+noJitterFilter: 0
+imperial: 0
+disableRssiPoweroffAlarm: 0
+USBMode: 0
+jackMode: 0
+ttsLanguage: "it"
+beepVolume: 2
+wavVolume: 3
+varioVolume: 2
+backgroundVolume: 3
+varioPitch: 0
+varioRange: 0
+varioRepeat: 0
+serialPort: 
+   VCP:
+      mode: CLI
+      power: 0
+potsConfig: 
+   P1:
+      type: with_detent
+      name: ""
+   P2:
+      type: with_detent
+      name: ""
+switchConfig: 
+   SA:
+      type: 3pos
+      name: ""
+   SB:
+      type: 3pos
+      name: ""
+   SC:
+      type: toggle
+      name: ""
+   SD:
+      type: toggle
+      name: ""
+   SE:
+      type: toggle
+      name: ""
+   SF:
+      type: toggle
+      name: ""
+   SG:
+      type: toggle
+      name: "---"
+   SH:
+      type: toggle
+      name: ""
+backlightColor: 0
+ownerRegistrationID: "713822Q-"
+rotEncMode: 0
+uartSampleMode: 0
